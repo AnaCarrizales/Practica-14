@@ -8,18 +8,24 @@
     </head>
     <body>
         <h1>Person: <%= ID %></h1>
-        <h2>Query string value: <%= Qstr %></h2>
+        <h2>Mensaje: <%= Msg %></h2>
         <ul>
-            <% switch (message) {
-                case 1: %>
-            Hola
-            <% break;
-                case 2: %>
-            Adios
-            <% break;
-                case 3: %>
-            Bienvenido
-            <% break;
+            <% switch (Msg) { case 'Hola': %> <% for(var i=0; i < Times; i++) { %>
+                <li>Hola <%= ID %></li>
+                <% } %> 
+                <% break; 
+                case 'Adios': %> <% for(var i=0; i < Times; i++) { %>
+                <li>Adios <%= ID %></li>
+                <% } %> 
+                <% break; 
+                case 'Bienvenido': %> <% for(var i=0; i < Times; i++) { %>
+                <li>Bienvenido <%= ID %></li>
+                <% } %> <% break; 
+                default: %> <% for(var i=0; i< Times; i++) { %>
+                <li><%= Msg %> <%= ID %></li>
+                <% } %>
+                <h3></h3>
+                <% break; } %>
         </ul>
     </body>
 </html>

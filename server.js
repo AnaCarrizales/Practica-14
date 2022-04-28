@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/person/:id',(req,res)=>{
-    res.render('person',{ID: req.params.id, Qstr: req.query.qrst, message: req.query.qrst, times: req.query.qrst});//Recibe objeto con dos llaves, ID y Qstr
+    res.render('person', { ID: req.params.id, Msg: req.query.msg, Times: req.query.times });//parametros de person, mensaje y times
 })
 
 app.listen(PORT);
